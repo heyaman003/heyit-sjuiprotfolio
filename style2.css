@@ -1,0 +1,240 @@
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+      
+}
+body{
+       background-color: rgb(25, 34, 46);
+       color: white;
+       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.headerclass{
+       position:relative;
+       top:0;
+       left:0;
+       width:100%;
+       padding:33px 25px;
+       background: transparent;
+       display: flex;
+       justify-content: space-between;
+       align-content: center;
+       z-index: 100%;
+}
+.logo{
+       font-size:40px;
+       color: white; 
+       text-decoration: none; 
+       font-weight: 700;
+       cursor: default;
+       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       text-shadow: 5px 4px 6px black;
+       opacity: 0;
+       animation: myanime 1s ease forwards;
+       animation-delay: 0.5s;
+       margin-left: 10px;
+}
+
+.navbar a{
+       font-size: 25px;
+       color: white;
+       text-decoration: none;
+       font-weight:500;
+       margin-left: 15px;
+     transition: .3s;
+     opacity: 0;
+     animation: myanime2 1s ease forwards;
+     animation-delay: calc(.2s*var(--i));
+     display:inline-flex;
+    
+}
+.navbar a:hover{
+       color:aqua;
+       text-shadow: 2px 2px 10px aqua;
+}
+
+#active{
+       color: aqua;
+       text-decoration: underline solid aqua;
+}
+.home{
+       position:relative;
+       width:100%;
+       height: 100;
+       display: flex;
+       justify-content: space-between;
+       align-items:center;
+       padding:65px 55px;
+}
+.homecontent{
+       max-width: 700px;
+       animation: myanimeright 1s ease forwards;
+       opacity: 0;
+       animation-delay: 0.3s;
+
+}
+
+.homecontent h3 {
+       font-size:32px;
+       font-weight: 700;
+       text-shadow: 3px 4px 6px black;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       margin-bottom: 30px;
+       animation: myanime2 1s ease forwards;
+       opacity: 0;
+       animation-delay: 0.7s;
+}
+.homecontent h3 span{
+       color: aqua;
+       opacity: 0;
+       animation: myanime3 1s ease forwards;
+       animation-delay: 0.7s;
+       
+}
+
+.homecontent h1{
+    font-size: 55px;
+    text-shadow: 2px 4px 6px black;
+    font-weight: 700;
+    margin: 6px 0;
+    opacity: 0;
+    animation:myanime 1s ease forwards;
+}
+.homecontent p{
+       font-size: 20px;
+       text-shadow: 2px 2px 4px black;
+       opacity: 0;
+       animation: myanime 1s ease forwards;
+       animation-delay: 0.6s;
+}
+.socialmedia a{
+       padding-top: 8px;
+       padding-bottom: 8px;
+       display: inline-flex;
+       width: 35px;
+       height: 35px;
+       background: transparent;
+       border:2px solid aqua;
+       font-size: 23px;
+       color: aqua;
+       justify-content: center;
+       align-items: center;
+       border-radius: 50%;
+       text-decoration: none;
+       box-shadow: 2px 5px 4px solid black;
+        margin:30px 15px 40px 0;
+        transition:0.5s ease-in;
+        opacity: 0;
+     animation: myanime3 1s ease forwards;
+     animation-delay: calc(.2s*var(--i));
+     display:inline-flex; 
+
+}
+.socialmedia a:hover{
+       background-color: aqua;
+       color: black;
+       transition: 0.5s ease-out;
+       box-shadow: 2px 2px 10px aqua;
+}
+.cve{   display: inline-block;
+       font-size:20px;
+       color: white;
+       text-decoration: none;
+       font-weight: bold;
+       text-shadow: 2px 3px 2px rgb(15, 23, 25);
+       padding:12px 28px;
+       border-radius:48px;
+       border: 1px solid aqua;
+       transition: 0.2s ease-out;
+ box-shadow: 2px 2px 4px black;
+    opacity: 0;
+       animation: myanime2 1s ease forwards;
+       animation-delay: 0.9s;
+}
+.cve:hover{
+       color: rgb(25,34,46);
+       background-color: aqua;
+       box-shadow: 6px 2px 7px aqua;
+       text-shadow: 2px 3px 4px rgb(96, 145, 164);
+       transition: 0.2s ease-in;
+}
+
+@keyframes myanime{
+       0%{
+            transform:translateX(-100px);
+            opacity:0;  
+       }
+       100%{
+              transform: translateX(0px);
+              opacity: 1;
+       }
+
+}
+@keyframes myanimeright{
+       0%{
+            transform:translateX(100px);
+            opacity:0;  
+       }
+       100%{
+              transform: translateX(0);
+              opacity: 1;
+       }
+
+}
+@keyframes myanime1{
+       0%{
+            transform:translatey(-100px);
+            opacity:0;  
+       }
+       100%{
+              transform: translatey(0px);
+              opacity: 1;
+       }
+
+}
+@keyframes myanime2{
+       0%{
+            transform:translatey(100px);
+            opacity:0;  
+       }
+       100%{
+              transform: translatey(0);
+              opacity: 1;
+       }
+
+}
+@keyframes myanime3{
+       0%{
+            transform:translatey(-100px);
+            opacity:0;  
+       }
+       100%{
+              transform: translatey(0);
+              opacity: 1;
+       }
+}
+.homeimg img{
+       max-width: 700px;
+       margin-right: -20px;
+       opacity:0.00000 ;
+       animation: zoomin 0.4s ease-in-out forwards;
+       animation-delay: 2s;
+       transition: 2s ease-out;
+
+}
+.homeimg:hover{
+    transform: scale(1.14);
+    transition: 2s ease-in;
+}
+@keyframes zoomin{
+       0%{
+          transform: scale(0);
+          opacity: 0;
+       }
+       100%{
+           transform:scale(1);
+           opacity: 1;
+       }
+}
+
+ 
